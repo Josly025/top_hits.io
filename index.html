@@ -4,14 +4,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
+
     <link
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Top Hits</title>
   </head>
   <body>
-    <h3>this is top hits</h3>
+    <!--header-->
+    <div class="video">
+      <video src="./images/rock_concert.mp4" muted loop autoplay></video>
+
+      <h1 class="title text__vertical">Top Hits</h1>
+
+      <h5 class="text__sub">
+        Search Your favorite artist and view a full list of their albums
+      </h5>
+      <input
+        type="text"
+        class="video__input"
+        placeholder="Artist search..."
+        id="search"
+      />
+      <button type="submit" class="search__btn" id="search_btn"></button>
+    </div>
+    <!--Input section-->
+    <div id="output"></div>
+
+    <!--generate albums-->
     <script src="app.js"></script>
   </body>
 </html>
