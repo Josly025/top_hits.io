@@ -52,12 +52,13 @@ function artistSearchTwo() {
         ${album.strAlbum3DFace}
         ${album.strDescriptionEN}
         
-        
-        
-        
-        
         `;
       });
       output.innerHTML = outputTwo;
+      clearInput();
     });
+}
+
+funtion clearInput(){
+  
 }

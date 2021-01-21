@@ -1,0 +1,20 @@
+{
+  "name": "top_hits.io",
+  "version": "1.0.0",
+  "description": "- Application to display popular music",
+  "main": "app.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/min.scss css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Josly025/top_hits.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Josly025/top_hits.io/issues"
+  },
+  "homepage": "https://github.com/Josly025/top_hits.io#readme"
+}
