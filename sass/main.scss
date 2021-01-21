@@ -9,6 +9,8 @@ body {
   font-family: "Rajdhani", sans-serif;
   font-size: 10px;
   color: black;
+  background: no-repeat;
+  background: linear-gradient(90deg, rgb(22, 22, 22), rgba(1, 6, 15, 0.911));
 }
 
 .video {
@@ -18,8 +20,6 @@ body {
   width: 100%;
   min-height: 25vh;
   display: flex;
-  justify-content: space-between;
-  align-items: right;
   color: #fff;
   z-index: 2;
   text-transform: uppercase;
@@ -36,7 +36,7 @@ body {
 .video__input {
   position: absolute;
   z-index: 10;
-  margin: 8rem 0rem 8rem 32rem;
+  margin: 10rem 65% 0rem 35%;
   width: 30rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.39);
@@ -66,10 +66,11 @@ body {
 }
 
 .text__sub {
+  margin-left: 50%;
+  margin-right: 50%;
   position: absolute;
-  z-index: 10;
   font-size: 1.5rem;
-  margin: 4rem 0rem 0rem 25rem;
+  margin: 4rem 80% 0rem 20%;
 }
 
 .search__btn {
@@ -78,7 +79,10 @@ body {
   padding: 1rem;
   margin: 8rem 2rem 0rem 20rem;
 }
-
+.btn {
+  margin-left: 50%;
+  margin-right: 50%;
+}
 // button
 
 a {
@@ -91,8 +95,8 @@ a {
   margin: auto;
   padding: 19px 22px;
   transition: all 0.2s ease;
-  margin-right: 43rem;
 }
+
 .cta:before {
   content: "";
   position: absolute;
@@ -138,16 +142,16 @@ a {
 }
 
 .container {
-  display: relative;
+  display: fixed;
   display: grid;
   grid-template-columns: 400px 400px 400px;
   grid-auto-rows: auto;
   grid-row-gap: 5rem;
   grid-column-gap: 5rem;
   justify-content: center;
-  margin-top: 82vh;
+  margin-top: 74vh;
   color: #fff;
-  background: linear-gradient(90deg, rgb(22, 22, 22), rgba(1, 6, 15, 0.911));
+  // background: linear-gradient(90deg, rgb(22, 22, 22), rgba(1, 6, 15, 0.911));
 }
 
 .card {
@@ -189,5 +193,61 @@ a {
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: White;
+  }
+}
+
+//Ipad
+@media (max-width: 1050px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 55vh;
+  }
+  .video__input {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+//Iphone X
+@media (max-width: 400px) {
+  body {
+    background: black;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: 75vh 0rem 0rem 2.5rem;
+    width: 120%;
+  }
+  .body {
+    font-size: 6px;
+  }
+  .btn {
+    display: relative;
+
+    padding: 7rem;
+  }
+  .video video {
+    width: 145%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .video__input {
+    width: 15rem;
+    margin: 10rem 2rem 2rem 12rem;
+  }
+
+  .text__sub {
+    width: 25rem;
+    margin-left: 35%;
+    position: absolute;
+    font-size: 1.5rem;
   }
 }
