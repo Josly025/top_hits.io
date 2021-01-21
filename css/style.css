@@ -182,7 +182,9 @@ a {
     flex-direction: column;
     margin-top: 55vh; }
   .video__input {
-    width: 20rem; } }
+    width: 20rem; }
+  .body {
+    font-size: 10rem; } }
 
 @media (max-width: 700px) {
   .container {
