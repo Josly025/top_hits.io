@@ -1,4 +1,4 @@
-const search = document.querySelector("#search");
+const searchInput = document.querySelector("#search");
 const searchBtn = document.querySelector("#search_btn");
 const output = document.querySelector("#output");
 
@@ -8,6 +8,7 @@ let artist = "Led Zeppelin";
 window.onload = artistSearch();
 
 function artistSearch() {
+  let initalAlbums = "";
   fetch(`https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=${artist}`)
     .then((response) => {
       return response.json();
@@ -15,50 +16,61 @@ function artistSearch() {
     .then((data) => {
       let albums = data.album;
       console.log(albums);
-      let output = "";
+      // rendering and mapping through albums
+      let albumStr = "";
       albums.map((album) => {
-        output += `
-        
-        
-        
-        
-        
-        
+        albumStr += `
+        <div class="card">
+        <h1>${album.strArtist}</h1>
+        <h2>${album.strAlbum}</h2>
+        <h3>Year released: ${album.intYearReleased}</h3>
+        <img src="${album.strAlbumThumb}" alt="album">
+        </div>
         `;
       });
+      output.innerHTML = albumStr;
     });
 }
 
 //Artist search on input click
-let artistInput = search.value;
+
 searchBtn.addEventListener("click", artistSearchTwo);
 
 function artistSearchTwo() {
+  let artistInput = searchInput.value;
+
   fetch(
     `https://www.theaudiodb.com/api/v1/json/1/searchalbum.php?s=${artistInput}`
   )
     .then((response) => {
       return response.json();
+      console.log(response.json() + "this is response");
     })
     .then((data) => {
-      let albums = data.album;
-      console.log(albums);
-      let outputTwo = "";
-      albums.map((album) => {
-        output += `
-        ${album.strAlbum}
-        Year released: ${album.intYearReleased}
-        ${album.strAlbum}
-        ${album.strAlbum3DFace}
-        ${album.strDescriptionEN}
-        
+      let newAlbums = data.album;
+
+      /// rendering and mapping through newAlbums
+      let renderAlbums = "";
+      newAlbums.map((album) => {
+        renderAlbums += `
+        <div class="card">
+        <h1>${album.strArtist}</h1>
+        <h2>${album.strAlbum}</h2>
+        <h3>Year released: ${album.intYearReleased}</h3>
+        <img src="${album.strAlbumThumb}" alt="album">
+        </div>
+         
         `;
       });
-      output.innerHTML = outputTwo;
-      clearInput();
+      output.innerHTML = renderAlbums;
     });
+
+  // setTimeout(() => {
+  //   clearInput();
+  // }, 10000);
 }
 
-funtion clearInput(){
-  
-}
+//clear the input after a search
+// function clearInput() {
+//   searchInput.value = "";
+// }
