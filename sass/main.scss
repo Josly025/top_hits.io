@@ -40,8 +40,9 @@ body {
   width: 30rem;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.39);
-  letter-spacing: 0.5rem;
-  padding: 0.75rem;
+  letter-spacing: 0.25rem;
+  font-size: 1.5rem;
+  padding: 1.3rem;
   border-radius: 0.25rem;
   text-align: center;
   border-color: #0000cd;
@@ -205,7 +206,7 @@ a {
   grid-row-gap: 5rem;
   grid-column-gap: 5rem;
   justify-content: center;
-  margin-top: 74vh;
+  margin-top: 5rem;
   color: #fff;
   // background: linear-gradient(90deg, rgb(22, 22, 22), rgba(1, 6, 15, 0.911))
 }
@@ -224,18 +225,19 @@ a {
   h2 {
     margin-top: 2rem;
     letter-spacing: 0.1rem;
-    font-size: 2.5rem;
     font-weight: 600;
     -webkit-text-fill-color: black; /* Will override color (regardless of order) */
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: White;
     padding-bottom: 3rem;
+    font-size: 3rem;
+    text-transform: uppercase;
   }
 }
 
 .anchor {
   background-color: transparent;
-  border: 0.3rem solid rgba(0, 0, 0, 0.808);
+  border: 0.5rem solid rgba(0, 0, 0, 0.808);
   color: white;
   padding: 1rem 3rem;
   position: relative;
