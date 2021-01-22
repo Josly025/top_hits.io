@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-
+    <httpProtocol>
+      <customHeaders>
+        <add name="X-Frame-Options" value="*" />
+      </customHeaders>
+    </httpProtocol>
     <link
       href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -39,10 +43,9 @@
     </div>
     <!--Input section-->
     <div class="container" id="output"></div>
-
+    <div id="outputvideo" class="container-video"></div>
     <!--generate albums-->
 
     <script src="app.js"></script>
-    <script src="btn.js"></script>
   </body>
 </html>

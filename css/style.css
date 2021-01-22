@@ -176,6 +176,57 @@ a {
     -webkit-text-stroke-width: 0.5px;
     -webkit-text-stroke-color: White; }
 
+.container-video {
+  display: fixed;
+  display: grid;
+  grid-template-columns: 400px 400px 400px;
+  grid-auto-rows: auto;
+  grid-row-gap: 5rem;
+  grid-column-gap: 5rem;
+  justify-content: center;
+  margin-top: 74vh;
+  color: #fff; }
+
+.card-video {
+  margin-top: 2rem;
+  background-image: url("../images/brick.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: border-box;
+  border-radius: 0.5rem;
+  text-align: center;
+  height: 25rem; }
+  .card-video h2 {
+    margin-top: 2rem;
+    letter-spacing: 0.1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    -webkit-text-fill-color: black;
+    /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: White;
+    padding-bottom: 3rem; }
+
+.anchor {
+  background-color: transparent;
+  border: 0.3rem solid rgba(0, 0, 0, 0.808);
+  color: white;
+  padding: 1rem 3rem;
+  position: relative;
+  margin-top: 5rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 400; }
+
+.anchor:hover {
+  background-color: rgba(0, 0, 0, 0.808); }
+
+.anchor:active {
+  box-shadow: none;
+  top: 5px; }
+
 @media (max-width: 1050px) {
   .container {
     display: flex;
@@ -202,7 +253,6 @@ a {
   .body {
     font-size: 6px; }
   .btn {
-    display: relative;
     padding: 7rem; }
   .video video {
     width: 145%;
