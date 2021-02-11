@@ -89,27 +89,6 @@ searchBtn.addEventListener("click", function artistSearchTwo(e) {
         `;
     });
     output.innerHTML = renderAlbums;
-    // const artistTwo = parseInt(newAlbums[0].idArtist);
-    // console.log(artistTwo);
-    // fetch(`https://theaudiodb.com/api/v1/json/1/mvid.php?i=${artistTwo}`)
-    //   .then((response) => {
-    //     return response.json();
-    //   })
-    //   .then((data) => {
-    //     let videoDataTwo = data.mvids;
-    //     console.log(videoDataTwo);
-    //     let videoStrTwo = "";
-    //     ////
-    //     videoDataTwo.map((video) => {
-    //       videoStrTwo += `
-    //     <div class="card-video">
-    //     <h2>${video.strTrack}</h2>
-    //   <a class="anchor" href="${video.strMusicVid}">Music Video</a>
-    //   </div>
-    //     `;
-    //     });
-    //     outputVideo.innerHTML = videoStrTwo;
-    //   });
   });
   e.preventDefault();
   setTimeout(() => {
